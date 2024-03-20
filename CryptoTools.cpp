@@ -5,7 +5,7 @@
 using namespace skd::Crypto;
 
 int main() {
-	std::string msg = "Hello, my name is skd";
+	/*std::string msg = "Hello, my name is skd";
 	std::array<u64, 2> userKey = { 0x0f0e0d0c0b0a0908, 0x0706050403020100 };
 	std::array<u64, 2> I = { 0x0f0e0d0c0b0a0908, 0x0706050403020100 };
 	block Key = block(userKey), Iv = block(I);
@@ -17,7 +17,11 @@ int main() {
 	auto cipher2 = s.Encrypt(msg, EncMode::CBC_MODE, { Iv });
 	std::string plain2 = a.Decrypt(cipher, EncMode::CBC_MODE, { Iv });
 
-	std::cout << plain1 << std::endl << plain2 << std::endl;
+	std::cout << plain1 << std::endl << plain2 << std::endl;*/
+
+	const char* msg = "abc";
+	SHA256 s = SHA256();
+	s.hash(msg);
 
 	return 0;
 }

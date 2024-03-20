@@ -3,8 +3,8 @@
 
 #pragma once
 
+// TODO: 在此处引用程序需要的其他标头。
 #include <iostream>
 #include "Crypto/AES.h"
 #include "Crypto/SM4.h"
-
-// TODO: 在此处引用程序需要的其他标头。
+#include "Crypto/SHA.h"
