@@ -1,0 +1,8 @@
+# ninja log v5
+7	1035	7326086471895495	CMakeFiles/CryptoTools.dir/Crypto/AES.cpp.obj	b03cc2af2ef77a7e
+15	86	7326086462485032	CMakeFiles/CryptoTools.dir/Crypto/SHA.cpp.obj	cb80cdf1990dbdae
+1	1036	7326086471951491	CMakeFiles/CryptoTools.dir/CryptoTools.cpp.obj	4b5a9cd749a2cbf4
+1036	1383	7326086475125074	CryptoTools.exe	c1cd16995e569e2a
+6	317	7324497874072560	CMakeFiles/CryptoTools.dir/Crypto/galois8bit.cpp.obj	b8eac2914d0fc1c7
+3	345	7326163782932814	build.ninja	80bcca1c0da2d09d
+11	1026	7326086471826034	CMakeFiles/CryptoTools.dir/Crypto/SM4.cpp.obj	e1a3dab52a01c694
