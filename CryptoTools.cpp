@@ -19,7 +19,7 @@ int main() {
 
 	std::cout << plain1 << std::endl << plain2 << std::endl;*/
 
-	const char* msg = "hello, world! my name is skd, i love ml";
+	const char* msg = "hello, world! my name is skd, i love tnl";
 	SHA256 s = SHA256();
 	s.hash(msg);
 	auto hashmsg = s.hexdigest();
