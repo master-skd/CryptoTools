@@ -66,7 +66,7 @@ namespace skd {
 		std::vector<u32> getBlocks(const std::vector<u32>& msg) {  // 由初始消息块计算新消息块
 			std::vector<u32> output(msg.begin(), msg.end());
 			for (size_t j = 16; j < 64; j++)
-				output.push_back(sig1(output[j - 2]) + output[j - 7] + sig0(output[j - 15] + output[j - 16]));
+				output.push_back(sig1(output[j - 2]) + output[j - 7] + sig0(output[j - 15]) + output[j - 16]);
 			return output;
 		}
 
@@ -75,13 +75,11 @@ namespace skd {
 			std::vector<unsigned char> m(msg, msg + size);  // 将消息拷贝到一个容器中，方便操作和填充
 			padding(m, size);  // 首先对消息进行填充
 			auto blockLen = size * 8 / 512;
-			std::vector<u32> H;  // 存储中间哈希值
+			std::vector<u32> H(hashInit, hashInit + 8);  // 存储中间哈希值
 			for (size_t i = 0; i < blockLen; i++) {
-				if (i == 0)  // 第一个块需要用到哈希初值
-					H.assign(hashInit, hashInit + 8);
 				std::vector<u32> M;  // 当前消息块，16个字
 				for (size_t j = 0; j < 16; j++) {
-					M.push_back((msg[i * 64 + j * 4]) | (msg[i * 64 + 1 + j * 4] << 8) | (msg[i * 64 + 2 + j * 4] << 16) | (msg[i * 64 + 3 + j * 4] << 24));
+					M.push_back((m[i * 64 + j * 4] << 24) | (m[i * 64 + 1 + j * 4] << 16) | (m[i * 64 + 2 + j * 4] << 8) | (m[i * 64 + 3 + j * 4]));
 				}
 				auto a = H[0], b = H[1], c = H[2], d = H[3], e = H[4], f = H[5], g = H[6], h = H[7];  // 用上一个哈希块来进行初始化
 				auto W = getBlocks(M);  // 获取消息块
