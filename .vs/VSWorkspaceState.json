@@ -15,10 +15,9 @@
     "",
     "\\Common",
     "\\Crypto",
-    "\\out",
     "\\out\\build",
     "\\out\\build\\debug"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\CryptoTools.cpp",
   "PreviewInSolutionExplorer": false
 }

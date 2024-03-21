@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\code\\CppProject\\CryptoTools\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\CryptoTools.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CryptoTools.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Crypto\\SHA.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\CryptoTools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CryptoTools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\Common\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Common\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Crypto\\SHA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,42 +25,46 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\CMakeLists.txt",
-              "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-03-20T02:55:18.145Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Block.h",
-              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\Common\\Block.h",
-              "RelativeDocumentMoniker": "Common\\Block.h",
-              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\Common\\Block.h",
-              "RelativeToolTip": "Common\\Block.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T02:53:59.831Z",
+              "DocumentIndex": 1,
+              "Title": "CryptoTools.cpp",
+              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\CryptoTools.cpp",
+              "RelativeDocumentMoniker": "CryptoTools.cpp",
+              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\CryptoTools.cpp",
+              "RelativeToolTip": "CryptoTools.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T11:03:54.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CryptoTools.h",
-              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\CryptoTools.h",
-              "RelativeDocumentMoniker": "CryptoTools.h",
-              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\CryptoTools.h",
-              "RelativeToolTip": "CryptoTools.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Title": "SHA.cpp",
+              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.cpp",
+              "RelativeDocumentMoniker": "Crypto\\SHA.cpp",
+              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.cpp",
+              "RelativeToolTip": "Crypto\\SHA.cpp",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-20T13:51:34.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SHA.h",
+              "DocumentMoniker": "D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.h",
+              "RelativeDocumentMoniker": "Crypto\\SHA.h",
+              "ToolTip": "D:\\code\\CppProject\\CryptoTools\\Crypto\\SHA.h",
+              "RelativeToolTip": "Crypto\\SHA.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T02:53:51.293Z",
+              "WhenOpened": "2024-03-20T08:26:40.098Z",
               "EditorCaption": ""
             }
           ]

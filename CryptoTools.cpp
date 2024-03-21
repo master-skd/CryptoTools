@@ -19,9 +19,11 @@ int main() {
 
 	std::cout << plain1 << std::endl << plain2 << std::endl;*/
 
-	const char* msg = "abc";
+	const char* msg = "BlockChain";
 	SHA256 s = SHA256();
 	s.hash(msg);
+	auto hashmsg = s.hexdigest();
+	std::cout << hashmsg << std::endl;
 
 	return 0;
 }

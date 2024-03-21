@@ -1,10 +1,11 @@
 #pragma once
+#include "../Common/Defines.h"
 #include<string>
 #include<sstream>
 #include<iostream>
-#include "../Common/Defines.h"
 #include<cstring>
 #include<vector>
+#include<iomanip>
 
 namespace skd {
 	namespace Crypto {
@@ -17,7 +18,7 @@ namespace skd {
 			std::string hexdigest();  // 将消息摘要转成16进制
 
 		private:
-			unsigned char digest[32];  // 保存256位摘要
+			std::vector<u32> digest;  // 保存256位摘要
 		};
 
 		class SHA3 {

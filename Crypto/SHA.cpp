@@ -39,17 +39,80 @@ namespace skd {
 			length += 8;
 		}
 
+		inline u32 Ch(u32 x, u32 y, u32 z) {
+			return (x & y) ^ (~x & z);
+		}
+		inline u32 Maj(u32 x, u32 y, u32 z) {
+			return (x & z) ^ (x & y) ^ (y & z);
+		}
+
+		inline u32 ShiftRight(u32 x, int n) {  // 循环右移n位
+			return (x >> n) | (x << (32 - n));
+		}
+
+		inline u32 Sig0(u32 x) {
+			return ShiftRight(x, 2) ^ ShiftRight(x, 13) ^ ShiftRight(x, 22);
+		}
+		inline u32 Sig1(u32 x) {
+			return ShiftRight(x, 6) ^ ShiftRight(x, 11) ^ ShiftRight(x, 25);
+		}
+		inline u32 sig0(u32 x) {
+			return ShiftRight(x, 7) ^ ShiftRight(x, 18) ^ (x >> 3);
+		}
+		inline u32 sig1(u32 x) {
+			return ShiftRight(x, 17) ^ ShiftRight(x, 19) ^ (x >> 10);
+		}
+
+		std::vector<u32> getBlocks(const std::vector<u32>& msg) {  // 由初始消息块计算新消息块
+			std::vector<u32> output(msg.begin(), msg.end());
+			for (size_t j = 16; j < 64; j++)
+				output.push_back(sig1(output[j - 2]) + output[j - 7] + sig0(output[j - 15] + output[j - 16]));
+			return output;
+		}
+
 		void SHA256::hash(const char* msg) {
-			auto size = strlen(msg);
+			auto size = strlen(msg);  // 统计消息的字节数
 			std::vector<unsigned char> m(msg, msg + size);  // 将消息拷贝到一个容器中，方便操作和填充
 			padding(m, size);  // 首先对消息进行填充
-			
+			auto blockLen = size * 8 / 512;
+			std::vector<u32> H;  // 存储中间哈希值
+			for (size_t i = 0; i < blockLen; i++) {
+				if (i == 0)  // 第一个块需要用到哈希初值
+					H.assign(hashInit, hashInit + 8);
+				std::vector<u32> M;  // 当前消息块，16个字
+				for (size_t j = 0; j < 16; j++) {
+					M.push_back((msg[i * 64 + j * 4]) | (msg[i * 64 + 1 + j * 4] << 8) | (msg[i * 64 + 2 + j * 4] << 16) | (msg[i * 64 + 3 + j * 4] << 24));
+				}
+				auto a = H[0], b = H[1], c = H[2], d = H[3], e = H[4], f = H[5], g = H[6], h = H[7];  // 用上一个哈希块来进行初始化
+				auto W = getBlocks(M);  // 获取消息块
+				for (size_t j = 0; j < 64; j++) {
+					u32 T1 = h + Sig1(e) + Ch(e, f, g) + hashConst[j] + W[j];
+					u32 T2 = Sig0(a) + Maj(a, b, c);
+					h = g;
+					g = f;
+					f = e;
+					e = d + T1;
+					d = c;
+					c = b;
+					b = a;
+					a = T1 + T2;
+				}
+				H[0] += a;
+				H[1] += b;
+				H[2] += c;
+				H[3] += d;
+				H[4] += e;
+				H[5] += f;
+				H[6] += g;
+				H[7] += h;
+			}
+			digest.assign(H.begin(), H.end());
 		}
 
 		std::string SHA256::hexdigest() {
 			std::stringstream ss;
 			for (auto byte : digest) {
-				ss << std::hex << byte;
+				ss << std::hex << std::setw(8) << std::setfill('0') << byte;
 			}
 			return ss.str();
 		}
