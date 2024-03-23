@@ -8,16 +8,17 @@
       "out\\build\\x86-debug",
       "out\\install\\x86-debug",
       "out\\build\\x86-release",
-      "out\\install\\x86-release"
+      "out\\install\\x86-release",
+      "out\\build\\default"
     ]
   },
   "ExpandedNodes": [
     "",
     "\\Common",
     "\\Crypto",
-    "\\out\\build",
-    "\\out\\build\\debug"
+    "\\out\\build\\debug",
+    "\\out\\build\\debug\\CMakeFiles"
   ],
-  "SelectedNode": "\\CryptoTools.cpp",
+  "SelectedNode": "\\Crypto\\SM3.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -15,6 +15,10 @@ namespace skd {
 			AES(const AES&) = default;
 			AES(const block&);  // 通过密钥来初始化该类对象
 
+			u64 getLength() const {  // 获取块个数
+				return this->blockLength;
+			}
+
 			block* Encrypt(std::string, EncMode, const std::initializer_list<const block>&);  // 对明文进行加密
 			std::string Decrypt(block*, EncMode, const std::initializer_list<const block>&);  // 对密文进行解密
 
@@ -23,9 +27,6 @@ namespace skd {
 			u64 blockLength;  // 块个数
 
 			void setKey(const block&);  // 设置加密所用密钥
-			u64 getLength() const {  // 获取块个数
-				return this->blockLength;
-			}
 
 			void EncBlocks(const block&, block&);  // 对一个分组块的加密
 			void DecBlocks(const block&, block&);  // 对最后一个分组块的解密

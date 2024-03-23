@@ -1,1 +1,5 @@
 .vs
+vcpkg-configuration.json
+vcpkg.D.dev.vcpkg.1.0.0.nupkg
+CMakeUserPresets.json
+vcpkg.json

@@ -3,6 +3,8 @@
 
 #include "CryptoTools.h"
 using namespace skd::Crypto;
+#include<json/json.h>
+using namespace Json;
 
 int main() {
 	/*std::string msg = "Hello, my name is skd";

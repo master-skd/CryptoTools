@@ -15,10 +15,12 @@ project ("CryptoTools")
 
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (CryptoTools "CryptoTools.cpp" "CryptoTools.h" "Common/Block.h" "Crypto/AES.h" "Crypto/AES.cpp" "Common/Defines.h" "Crypto/SM4.h" "Crypto/SM4.cpp"   "Crypto/SHA.cpp" "Crypto/SHA.h")
+add_executable (CryptoTools "CryptoTools.cpp" "CryptoTools.h" "Common/Block.h" "Crypto/AES.h" "Crypto/AES.cpp" "Common/Defines.h" "Crypto/SM4.h" "Crypto/SM4.cpp"   "Crypto/SHA.cpp" "Crypto/SHA.h" "Crypto/SM3.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CryptoTools PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
+find_package(jsoncpp CONFIG REQUIRED)
+target_link_libraries(CryptoTools PRIVATE JsonCpp::JsonCpp)

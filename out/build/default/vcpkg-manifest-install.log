@@ -1,0 +1,16 @@
+正在检测三元组 x64-windows 的编译器哈希...
+-- 正在将 %HTTP(S)_PROXY% 环境变量自动设置为“127.0.0.1:7890”。
+Compiler found: E:/Download/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/cl.exe
+当前已安装所有请求的包。
+总安装时间: 200 ns
+jsoncpp 提供 CMake 目标:
+
+  # 这是启发式生成的，并且可能不正确
+  find_package(jsoncpp CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE JsonCpp::JsonCpp)
+
+jsoncpp 提供 pkg-config 模块:
+
+    # A C++ library for interacting with JSON
+    jsoncpp
+

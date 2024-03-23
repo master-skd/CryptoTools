@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CryptoTools::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CryptoTools-Debug-a4b82145b09731ad8cc4.json",
+					"jsonFile" : "target-CryptoTools-Debug-1e1196712955fbb0ca5c.json",
 					"name" : "CryptoTools",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/code/CppProject/CryptoTools/out/build/x64-debug",
+		"build" : "D:/code/CppProject/CryptoTools/out/build/default",
 		"source" : "D:/code/CppProject/CryptoTools"
 	},
 	"version" : 

@@ -20,9 +20,5 @@ namespace skd {
 		private:
 			std::vector<u32> digest;  // ±£´æ256Î»ÕªÒª
 		};
-
-		class SHA3 {
-
-		};
 	}
 }
